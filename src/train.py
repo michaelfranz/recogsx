@@ -78,7 +78,7 @@ if __name__ == '__main__':
 
     # Construct the argument parser.
     parser = argparse.ArgumentParser()
-    parser.add_argument('-e', '--epochs', type=int, default=1,
+    parser.add_argument('-e', '--epochs', type=int, default=10,
                         help='number of epochs to train our network for')
     parser.add_argument(
         '-lr', '--learning-rate', dest='learning_rate', default=0.001,
