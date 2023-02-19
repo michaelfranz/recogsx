@@ -41,7 +41,7 @@ After running this script, the generated files can be moved to the
 ```input``` directory by running the shell script ```setup/02_prep_datset.ipynb```
 
 Once the project is set up (by preprocessing AudioMNIST files as described above) there are two main programs that can be run:
-```src/search.py``` and ```src/train.py```. The
+```src/search.py``` and ```src/train.py```. 
 
 ```src/search.py``` uses the skorch library in conjunction with sklearn's GridSearchCV to perform an exploration
 of a limited set of hyperparameters. Search results are dropped into subfolders of the ```outputs``` directory.
@@ -55,6 +55,8 @@ The subfolders ```run_N``` contain plots of accuracy and loss over the number of
 ## MODEL 
 
 The model chosen to perform this task is a Convolutional Neural Network (CNN). The CNN does not process audio samples (in the ```wav``` format) directly, but instead processes an image representation (in the ```jpg``` format) of the original audio. The image represents a so-called Mel-frequency cepstrum (MFC). For example, the following MFC image represents a female saying the digit "zero": 
+
+![img_3.png](img_3.png)
  
 These RGB images have shape 98x12x3, and the CNN is specifically designed to process shapes of this kind.                                
 
