@@ -72,7 +72,7 @@ def save_best_hyperparam(text, path):
 def select_device():
     if torch.cuda.is_available():
         return torch.device("cuda")
-    elif torch.backends.mps.is_available():
-        return torch.device("mps")
+    # elif torch.backends.mps.is_available():
+    #     return torch.device("mps")
     else:
         return torch.device("cpu")

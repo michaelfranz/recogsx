@@ -48,13 +48,29 @@ The model performs a binary classification, and therefore outputs a zero or a on
 
 ## Performance
 
-TODO
-Give a summary graph or metrics of how the model performs. Remember to include how you are measuring the performance and what data you analysed it on. 
+![img.png](img.png)
+             
+![img_1.png](img_1.png)
+
+Following 25 epochs:
+
+Training loss: 0.070, training acc: 97.411
+
+Validation loss: 0.120, validation acc: 95.625
 
 ## Limitations
 
-The model's accuracy is obviously limited. The primary aim of the project was to demonstrate understanding, as opposed to achieving high accuracy. Given that this was the author's first shot at creating a CNN for processing audio, it is highly likely that accuracy would be improved with further work. 
+The primary aim of the project was to demonstrate understanding, as opposed to achieving high accuracy. 
+Given that this was the author's first shot at creating a CNN for processing audio, it is highly likely that accuracy 
+would be improved with further work.
+
+The AudioMNIST dataset comprises a highly homogenous set of audio files. Sampling rates and other audio metrics are consistent.
+If this project were to be used in the real world, then it would need to be able to handle audio samples with different
+audio characteristics. However, this is likely to be a question of pre-processing rather than modelling.
 
 ## Trade-offs
 
-The main trade-off was already expressed under Limitations: The model was designed for demonstration as opposed to performance. The relative simplicity of the model comes at the expense of accuracy. 
+The main trade-off was already expressed under Limitations: The model was designed for demonstration as opposed to performance. The relative simplicity of the model comes at the expense of accuracy.
+Furthermore, due to time constraints only two hyperparameters were explored using a grid search. If this search were to widened
+to include more hyperparameters, optimisation algorithms, adjustments to the number of layers in the model, then it is quite possible that the performance could be
+further improved.

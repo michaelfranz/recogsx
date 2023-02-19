@@ -46,16 +46,17 @@ if __name__ == '__main__':
     )
 
     counter = 0
-    search_batches = 2
+    # search_batches = 2
     for i, data in enumerate(train_loader):
+        print(f'Search batch {i+1}')
         counter += 1
         image, labels = data
         image = image.to(device)
         labels = labels.to(device)
         outputs = gs.fit(image, labels)
         # GridSearch for `search_batches` number of times.
-        if counter == search_batches:
-            break
+        # if counter == search_batches:
+        #     break
 
     print('SEARCH COMPLETE')
     print("best score: {:.3f}, best params: {}".format(gs.best_score_, gs.best_params_))

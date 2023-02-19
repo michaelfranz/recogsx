@@ -37,8 +37,6 @@ Mel-frequency cepstrum renderings of the original audio. It is these images, whi
 The original AudioMNIST labels, amongst other things, the gender of the speaker. The gender has been incorporated 
 into the filename.
 
-Finally, a couple of files in the folder ```audio_to_mfc_maps``` are used to map the mfc files to the original audio.
- 
 ## Uses
 
 This project has focussed on gender-recognition. Other than the dataset's original intent of training a NN to recognise
